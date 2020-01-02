@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">Blood Sugar Control</string>
+    <string name="temp">temp</string>
 
     <string name="emailhint">Enter Email</string>
     <string name="passwordemail">Enter Password</string>
     <string name="login">Login</string>
+
+    <string name="version">Version 2.0.0</string>
 </resources>

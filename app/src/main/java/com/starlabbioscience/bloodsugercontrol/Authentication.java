@@ -1,6 +1,8 @@
 package com.starlabbioscience.bloodsugercontrol;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -56,7 +58,7 @@ public class Authentication extends AppCompatActivity {
                     System.out.println("$USER PASSWORD ENTERED");
                 }
 
-                if (Password.length() <= 6 ){
+                if (Password.length() <= 0b110){
                     String msg;
                     msg = "PLEASE ENTER A STRONG PASSWORD (MUST BE AT LEAST 6 LETTERS OR NUMBERS) ";
                     PASSWORD.setError(msg);
@@ -65,5 +67,11 @@ public class Authentication extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public void temp(View view){
+        Intent main;
+        main = new Intent(Authentication.this, MainActivity.class);
+        startActivity(main);
     }
 }
