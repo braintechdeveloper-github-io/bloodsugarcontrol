@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 /**
- * @AUTHOR : JOHN MELODY ME || HAFIZAN
+ * @AUTHOR : JOHN MELODY ME || HAFIZAN ||
  * @COPYRIGHT : BRAINTECH SDN BHD || STARLABS BIOSCIENCE SDN BHD
  * @PROJECT: BLOOD SUGAR CONTROL
  */
