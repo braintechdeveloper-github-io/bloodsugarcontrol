@@ -27,7 +27,7 @@ public class Splash_Screen extends AppCompatActivity {
             @Override
             public void run() {
                 Intent TOAUTHENTICATION;
-                TOAUTHENTICATION = new Intent(Splash_Screen.this, MainActivity.class);
+                TOAUTHENTICATION = new Intent(Splash_Screen.this, Authentication.class);
                 startActivity(TOAUTHENTICATION);
             }
         }, 5010);
