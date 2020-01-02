@@ -7,4 +7,10 @@
     <string name="login">Login</string>
 
     <string name="version">Version 2.0.0</string>
+
+    <string name="pause">Pause</string>
+    <string name="play">Play</string>
+    <string name="forward"> +5 Sec</string>
+    <string name="Rewind">-5 Sec</string>
+    <string name="stop">Stop</string>
 </resources>
