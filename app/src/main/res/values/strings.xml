@@ -13,4 +13,11 @@
     <string name="forward"> +5 Sec</string>
     <string name="Rewind">-5 Sec</string>
     <string name="stop">Stop</string>
+
+    <string name="menu">  MENU</string>
+    <string name="profile">PROFILE</string>
+    <string name="reload">RELOAD</string>
+    <string name="news">NEWS</string>
+    <string name="copyright"> All right Reserved © 2020 Star Labs Bioscience </string>
+
 </resources>

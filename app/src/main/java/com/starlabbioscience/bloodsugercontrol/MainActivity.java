@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +20,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     // UI- DECLARE:
     Button SETTING, PLAY, FORWARD, REWIND, STOP;
+    Button FACEBOOK, WEBSITE, WHATSAPP;
     MediaPlayer BiauralPlayer;
 
 
@@ -41,6 +43,10 @@ public class MainActivity extends AppCompatActivity {
         STOP = findViewById(R.id.stop);
         REWIND = findViewById(R.id.previous);
         FORWARD = findViewById(R.id.forward);
+
+        FACEBOOK = findViewById(R.id.fb);
+        WEBSITE = findViewById(R.id.web);
+        WHATSAPP = findViewById(R.id.ws);
     }
 
     @Override
@@ -51,8 +57,8 @@ public class MainActivity extends AppCompatActivity {
 
         final int TIME, FF, RR;
         TIME = BiauralPlayer.getCurrentPosition();
-        FF = 5000;
-        RR = 5000;
+        FF = 0b1001110001000;
+        RR = 0b1001110001000;
 
         // ONCLICK TO SETTING ACTIVITY:
         SETTING.setOnClickListener(new View.OnClickListener() {
@@ -68,18 +74,12 @@ public class MainActivity extends AppCompatActivity {
         PLAY.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String Pause, Play, Stop, Rewind, Forward;
+                String Pause, Play;
 
                 Pause = getResources()
                         .getString(R.string.pause);
                 Play = getResources()
                         .getString(R.string.play);
-                Stop = getResources()
-                        .getString(R.string.stop);
-                Rewind = getResources()
-                        .getString(R.string.Rewind);
-                Forward = getResources()
-                        .getString(R.string.forward);
 
                 if (BiauralPlayer.isPlaying()){
                     //BiauralPlayer.setVolume(0,0);
@@ -103,10 +103,11 @@ public class MainActivity extends AppCompatActivity {
         REWIND.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String REWIND_FIVE;
-                REWIND_FIVE = "- 5 SEC";
+                String Rewind;
+                Rewind = getResources()
+                        .getString(R.string.Rewind);
 
-                Toast.makeText(getApplicationContext(), REWIND_FIVE,
+                Toast.makeText(getApplicationContext(), Rewind,
                         Toast.LENGTH_SHORT)
                         .show();
 
@@ -123,10 +124,11 @@ public class MainActivity extends AppCompatActivity {
         FORWARD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String FORWARD_FIVE;
-                FORWARD_FIVE = "+ 5 SEC";
+                String Forward;
+                Forward = getResources()
+                        .getString(R.string.forward);
 
-                Toast.makeText(getApplicationContext(), FORWARD_FIVE,
+                Toast.makeText(getApplicationContext(), Forward,
                         Toast.LENGTH_SHORT)
                         .show();
 
@@ -161,5 +163,23 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public void FACEBOOK(View view){
+        Intent TOFACEBOOKPAGE = new Intent(Intent.ACTION_VIEW,
+                Uri.parse("https://web.facebook.com/StarLabsBioscience?_rdc=1&_rdr"));
+        startActivity(TOFACEBOOKPAGE);
+    }
+
+    public void WEBSITE(View view){
+        Intent TOWEBSITE = new Intent(Intent.ACTION_VIEW,
+                Uri.parse("https://www.starlabs.com.my/"));
+        startActivity(TOWEBSITE);
+    }
+
+    public void WHATSAPP(View view){
+        Intent TOWHATSAPP = new Intent(Intent.ACTION_VIEW,
+                Uri.parse("https://wa.me/6013-9319018?text=[This%20is%20automated%20Message].%20I%20Would%20like%20to%20know%20more.%20"));
+        startActivity(TOWHATSAPP);
     }
 }
