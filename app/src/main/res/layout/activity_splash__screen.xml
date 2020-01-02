@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@mipmap/splash"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Fullscreen"
+    tools:context=".Splash_Screen">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="116dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="498dp"
+        android:layout_marginBottom="52dp"
+        android:src="@mipmap/pb"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
